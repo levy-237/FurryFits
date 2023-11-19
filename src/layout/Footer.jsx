@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <footer>
@@ -9,10 +12,18 @@ export default function Footer() {
             <p style={{ color: "grey", marginBottom: "0px", marginTop: "0px" }}>
               NAVIGATION
             </p>
-            <Link to="/">HOME</Link>
-            <Link to="/FAQ">ABOUT</Link>
-            <Link>CONTACT</Link>
-            <Link to="/FAQ">FAQ</Link>
+            <Link to="/">
+              <span onClick={scrollToTop}>HOME</span>
+            </Link>
+            <Link to="/FAQ">
+              <span onClick={scrollToTop}>ABOUT</span>
+            </Link>
+            <Link>
+              <span onClick={scrollToTop}>CONTACT</span>
+            </Link>
+            <Link to="/FAQ">
+              <span onClick={scrollToTop}>FAQ</span>
+            </Link>
           </div>
           <div className="footerOt">
             <p style={{ color: "grey" }}>INFORMATION</p>

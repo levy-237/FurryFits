@@ -1,0 +1,820 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Courier New", Courier, monospace;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.header {
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  transition: background-color 0.7s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+.header.opaque {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  color: black;
+}
+.header.opaque a {
+  color: black;
+}
+.header.opaque p {
+  color: black;
+}
+.header.opaque.stick {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.headerName {
+  margin-left: 2.5rem;
+  text-decoration: none;
+  font-size: x-large;
+  color: white;
+}
+.burgerMenu {
+  display: none;
+}
+footer {
+  margin-top: 3rem;
+  background-color: black;
+  color: white;
+}
+.footer {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
+  margin-bottom: 3vh;
+}
+footer a {
+  color: white;
+}
+.footerPol {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family: "Courier New", Courier, monospace;
+}
+.footerNav {
+  margin-top: 19.2px;
+  margin-right: auto;
+  margin-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger;
+  gap: 2rem;
+}
+.footerOt {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger;
+}
+.footerOt p {
+  cursor: pointer;
+}
+.footerPol p {
+  cursor: pointer;
+}
+hr {
+  width: 95%;
+  color: grey;
+}
+.cart {
+  cursor: pointer;
+  margin-right: 2.5rem;
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  display: "flex";
+  gap: 10px;
+  align-items: "center";
+}
+.homeImage {
+  transition: background-image 2.5s ease-in-out;
+}
+
+.header-comps {
+  display: flex;
+  justify-content: space-around;
+  width: 25rem;
+  align-items: center;
+}
+.header-comps a:hover {
+  cursor: pointer;
+  transform: rotateX(360deg);
+  animation: rotate360 0.7s ease;
+}
+.header-comps a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
+.homeImage {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-image 0.5s ease-in-out;
+}
+.homeImage a {
+  color: white;
+}
+.homeImage a:hover {
+  color: black;
+}
+.homeImageDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  height: 29rem;
+  width: 100%;
+}
+.homeImageDiv div {
+  margin-left: auto;
+  margin-right: 13rem;
+  font-family: "Playfair Display", serif;
+  font-size: larger;
+}
+
+.homeImageButton {
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: 0.5rem;
+  width: 9.5rem;
+  color: white;
+  border: 0px;
+  background-color: black;
+  height: 4rem;
+  border-radius: 3.5rem;
+  font-weight: 100;
+  transition: 0.5s;
+  font-size: 1rem;
+}
+.homeImageButton:hover {
+  box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.418);
+  color: rgb(255, 255, 255);
+}
+
+.homeImageLeftArrow,
+.homeImageRightArrow {
+  position: absolute;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.homeImageLeftArrow {
+  left: 0;
+  margin-left: 2.5rem;
+  bottom: 0;
+}
+
+.homeImageRightArrow {
+  right: 0;
+  margin-right: 2.5rem;
+  bottom: 0;
+}
+.homeImageCircle {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2.5rem;
+}
+.homeImageCircle span {
+  margin: 0.5rem;
+}
+
+.homeSecondImageDiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.homeSecondImageDiv h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 2.1rem;
+  font-family: sans-serif;
+}
+.homeSecondImageDiv h1:nth-child(1) {
+  margin-top: 4.5rem;
+  color: rgb(255, 255, 255);
+}
+.homeSecondImageDiv button {
+  margin-bottom: 5.5rem;
+  cursor: pointer;
+  margin-top: auto;
+  width: 9.5rem;
+  color: white;
+  border: 0px;
+  background-color: black;
+  height: 4rem;
+  border-radius: 3.5rem;
+  font-weight: 100;
+  transition: 0.5s;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+.homeSecondImageDiv button:hover {
+  box-shadow: 6px 7px 7px rgba(0, 0, 0, 0.568);
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+.homeSecondImageDiv div {
+  margin-left: auto;
+  margin-right: 2.5rem;
+  margin-top: 2.5rem;
+}
+.browserContainer h1 {
+  text-align: center;
+  font-size: 2.1rem;
+}
+.browserContainer {
+  margin-top: 10rem;
+  height: 40rem;
+}
+.browserContainer h1 {
+  margin-bottom: 0rem;
+  font-family: serif;
+}
+.browserDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+  font-size: larger;
+  letter-spacing: 0.5px;
+  font-family: Courier, monospace;
+}
+
+.browserDiv div {
+  max-width: 40rem;
+  text-align: center;
+}
+.browseImg1 {
+  border-radius: 2px;
+  height: 20rem;
+  width: 13.5rem;
+  margin: 2.5rem;
+}
+.browseImg2 {
+  border-radius: 2px;
+  margin: 2.5rem;
+  height: 20rem;
+  width: 13.5rem;
+}
+.browserDiv a {
+  text-align: center;
+  color: grey;
+  text-decoration: none;
+  font-size: larger;
+  border: 1px solid black;
+  padding: 7px;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+.browserDiv div p {
+  margin-bottom: 2.5rem;
+}
+.browserDiv a:hover {
+  color: black;
+  border-radius: 11px;
+}
+.shopImg {
+  width: 100%;
+  min-height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  transition: background-image 0.5s ease-in-out;
+  margin-bottom: 2.5rem;
+}
+.shopImg h1 {
+  margin-bottom: 5rem;
+  font-size: 5vh;
+  margin-left: 2.5rem;
+}
+.shopFilter {
+  margin-left: 2rem;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.shopFilter div {
+  display: flex;
+  gap: 2rem;
+  color: grey;
+}
+.shopFilter div a {
+  transition: 0.3s;
+}
+.shopFilter div a:hover {
+  color: black;
+  cursor: pointer;
+}
+.RESET {
+  font-size: x-small;
+  margin-top: auto;
+  margin-left: 0px;
+}
+.shopContainer {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.shopDiv {
+  flex: 0 0 calc(33.333% - 10px);
+  margin: 5px;
+  box-sizing: border-box;
+}
+.shopDiv img {
+  border-radius: 3px;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+.shopDivBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.shopDivBottom div {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+}
+.shopDivBottom div h2 {
+  margin: 0px;
+}
+.shopDivBottom div p {
+  color: grey;
+  font-size: 1rem;
+}
+.shopPrice {
+  margin-right: 1rem;
+  font-size: large;
+  margin-top: 5px;
+  color: grey;
+}
+
+.swiper {
+  margin-top: 10vh;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 25px;
+  background: #fff;
+  margin-bottom: 40px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.review {
+  cursor: grab;
+}
+.review p {
+  color: grey;
+  width: 90%;
+}
+.review h2 {
+  margin-top: 3rem;
+}
+
+.FAQimage {
+  width: 100%;
+  min-height: 65vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+.FAQimage p {
+  margin-top: auto;
+  color: white;
+  margin-left: 4.5rem;
+  color: grey;
+  font-family: "Playfair Display", serif;
+}
+.FAQimage h1 {
+  margin-top: auto;
+  color: white;
+  margin-left: 4.5rem;
+  font-size: 3rem;
+  margin-top: 5px;
+  margin-bottom: 3rem;
+  font-family: "Playfair Display", serif;
+}
+/* change on mobile  */
+.FAQdiv {
+  height: 100rem;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.FAQquestions {
+  width: 30%;
+  font-family: monospace;
+  background-color: grey;
+  color: rgb(30, 30, 30);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+  height: 100%;
+}
+.FAQquestions h2 {
+  margin-top: 3rem;
+  margin-left: 4.5rem;
+}
+.FAQquestions a {
+  font-size: 1rem;
+  margin: 0px;
+  margin-left: 4.5rem;
+  margin-top: 2.5rem;
+}
+
+.FAQanswers {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.FAQanswers h3 {
+  margin: 0px;
+}
+.answersDiv {
+  display: flex;
+  flex-direction: column;
+  margin-left: 6rem;
+}
+.answersDiv h3 {
+  color: rgb(86, 86, 86);
+  font-size: 1.6rem;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.729);
+  margin-bottom: 0.5rem;
+  margin-top: 3.5rem;
+}
+.answers h4 {
+  font-size: 1.3rem;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+  display: flex;
+}
+.answers h4 span {
+  margin-left: 2rem;
+}
+.answers p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+}
+.answers {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.263);
+}
+
+.cardContainer {
+  color: black;
+  margin-bottom: 12rem;
+  background: linear-gradient(to bottom, #909090, #fff);
+  font-family: "Courier New", Courier, monospace;
+}
+.cardDiv {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  margin-left: 1rem;
+}
+.cardPhoto {
+  padding-top: 75px;
+  margin-left: 3rem;
+  height: fit-content;
+  width: fit-content;
+}
+.cardPhoto img {
+  height: 45rem;
+  width: 30rem;
+  border-radius: 3px;
+}
+.cardInfo {
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.cardInfo h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.cardP:hover {
+  cursor: pointer;
+}
+.cardInfo span {
+  font-size: 1rem;
+  color: rgb(19, 19, 19);
+}
+.cardInfo p {
+  width: 80%;
+  margin-top: 1.5rem;
+  font-size: larger;
+}
+.cardInfo button {
+  width: 80%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 3rem;
+  background-color: black;
+  color: white;
+  font-size: medium;
+  border-radius: 25px;
+  border: 0px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.descriptionPlus {
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.cardInfo button:hover {
+  background-color: white;
+  color: black;
+  border-radius: 23px;
+}
+.descDiv {
+  width: 80%;
+  border-bottom: 1px solid grey;
+}
+
+.tickerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+.tickerDiv h2 {
+  margin: 10px;
+}
+.tickerImg {
+  height: 10rem;
+  width: 7rem;
+}
+/* 
+
+
+
+
+
+
+
+
+ */
+
+@media screen and (max-width: 900px) {
+  .descDiv {
+    width: 85%;
+  }
+  .cardInfo p {
+    width: 85%;
+  }
+  .cardDiv {
+    gap: 4rem;
+    margin: 0px;
+    align-items: center;
+  }
+  .cardPhoto {
+    margin: 0px;
+    margin-top: 1.5rem;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .cardPhoto img {
+    max-height: max-content;
+    max-width: max-content;
+  }
+  .cardInfo {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardInfo h1 {
+    text-align: center;
+  }
+  .cardDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .FAQquestions h2 {
+    margin-left: 10px;
+  }
+  .FAQquestions a {
+    margin-left: 10px;
+  }
+  .answersDiv {
+    margin-left: 10px;
+  }
+
+  .homeImageDiv div {
+    width: 100%;
+  }
+  .homeImageDiv div h1,
+  h2 {
+    text-align: center;
+  }
+  .browserDiv {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: center;
+  }
+  .browserDiv div {
+    order: -1;
+  }
+  .shopDiv img {
+    height: 350px;
+  }
+  .shopDiv {
+    flex: 0 0 calc(50% - 10px);
+  }
+  .swiper-slide {
+    font-size: 21px;
+  }
+  .review p {
+    width: 100%;
+  }
+  /* 
+
+
+
+  
+ */
+}
+@media screen and (max-width: 600px) {
+  .cardPhoto img {
+    height: 100%;
+    width: 100%;
+  }
+  .cart {
+    order: 0;
+    margin-left: auto;
+  }
+  .burgerMenu {
+    display: flex;
+    order: 1;
+    margin-right: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .answers {
+    margin-right: 15px;
+  }
+  .header-comps {
+    display: none;
+  }
+  .FAQquestions a {
+    font-size: 0.9rem;
+    margin-right: 5px;
+  }
+
+  .answers h4 {
+    font-size: 1rem;
+  }
+  .browserDiv {
+    letter-spacing: 0px;
+    font-size: medium;
+  }
+  .shopContainer {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  .browseImg1 {
+    border-radius: 2px;
+    height: 12rem;
+    width: 9rem;
+    margin: 1.5rem;
+  }
+  .browseImg2 {
+    border-radius: 2px;
+    margin: 1.5rem;
+    height: 12rem;
+    width: 9rem;
+  }
+  .shopDivBottom div h2 {
+    font-size: larger;
+  }
+  .swiper-slide {
+    font-size: 14px;
+  }
+  .footerNav {
+    margin: 0px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: start;
+  }
+  .FAQimage {
+    background-position: center;
+    min-height: 45vh;
+  }
+  .FAQimage p {
+    margin-left: 1.5rem;
+  }
+  .FAQimage h1 {
+    margin-left: 1.5rem;
+    font-size: 2rem;
+  }
+  .shopFilter {
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .homeImageDiv div h1,
+  h2 {
+    text-align: center;
+  }
+  .homeSecondImageDiv div {
+    margin: 0px;
+  }
+  .browseImg1 {
+    border-radius: 2px;
+    height: 10rem;
+    width: 7rem;
+    margin: 1.5rem;
+  }
+  .browseImg2 {
+    border-radius: 2px;
+    margin: 1.5rem;
+    height: 10rem;
+    width: 7rem;
+  }
+  .shopDiv img {
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+}

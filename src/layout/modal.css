@@ -1,0 +1,172 @@
+.x {
+  position: absolute;
+  font-size: larger;
+  top: 17px;
+  right: 14px;
+  color: rgb(0, 0, 0);
+  margin: 0px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.3rem;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 35%;
+  background-color: rgba(255, 255, 255, 0.993);
+  color: black;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1.3s ease, transform 1.3s ease;
+}
+.menu.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.menu a {
+  font-size: larger;
+}
+.xForBag {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  position: absolute;
+  font-size: larger;
+  top: 17px;
+  left: 14px;
+  color: rgb(255, 255, 255);
+  margin: 0px;
+}
+.xForBag span {
+  font-size: large;
+}
+.bag::-webkit-scrollbar {
+  display: none;
+}
+.bag {
+  font-family: Courier, monospace;
+  overflow: auto;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.3rem;
+  align-items: start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 253, 253);
+  transition: opacity 0.5s;
+}
+.bag-invisible {
+  opacity: 0;
+  pointer-events: none; /* Makes the modal unclickable */
+}
+
+.bag-visible {
+  opacity: 1; /* Modal is visible */
+  pointer-events: initial; /* Modal is clickable */
+}
+.bagCard {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.366);
+  padding-bottom: 1.2rem;
+}
+.bagCard h1 {
+  margin-top: 5px;
+}
+.bagCard div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+.bagCard div span {
+  cursor: pointer;
+  color: rgb(240, 240, 240);
+  font-size: 1.1rem;
+}
+.bagCard div h4 {
+  font-weight: 100;
+  margin: 0px;
+  margin-bottom: 2px;
+  font-size: medium;
+  color: rgb(193, 193, 193);
+}
+.bagTotal {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid grey;
+  padding-bottom: 1.3rem;
+}
+.bagTotal span {
+  margin-left: 1.5rem;
+}
+.bagTotal h4 {
+  font-weight: 100;
+  margin: 0px;
+  margin-right: 1.5rem;
+}
+.bag section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.bag section span {
+  margin-top: 1rem;
+  background-color: rgba(255, 0, 0, 0.579);
+  color: black;
+  width: 68%;
+  height: 1.5rem;
+  text-align: start;
+  padding-left: 10px;
+  border-left: 5px solid red;
+}
+.bagButton {
+  font-family: Courier, monospace;
+  font-size: larger;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 2.3rem;
+  height: 3rem;
+  width: 70%;
+  transition: 0.2s;
+}
+.bagButton:hover {
+  border-radius: 2rem;
+  background-color: grey;
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  .bag {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .bag {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .bag {
+    width: 90%;
+  }
+}

@@ -23,6 +23,9 @@ export default function burgerMenu({ setMenu, menu }) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  const scrollToTop = () => window.scrollTo(0, 0);
+
+  const handleClick = () => (setMenu(false), scrollToTop());
   return (
     <div className={`menu ${menu ? "active" : ""}`} ref={menuRef}>
       <span onClick={() => setMenu(false)} className="x">
@@ -30,13 +33,13 @@ export default function burgerMenu({ setMenu, menu }) {
           <AiOutlineFullscreenExit />
         </IconContext.Provider>
       </span>
-      <span onClick={() => setMenu(false)}>
+      <span onClick={handleClick}>
         <Link to="/">HOME</Link>
       </span>
-      <span onClick={() => setMenu(false)}>
+      <span onClick={handleClick}>
         <Link to="/shop">SHOP</Link>
       </span>
-      <span onClick={() => setMenu(false)}>
+      <span onClick={handleClick}>
         <Link to="/FAQ">FAQ</Link>
       </span>
     </div>

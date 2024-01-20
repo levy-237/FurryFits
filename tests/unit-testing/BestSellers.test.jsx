@@ -9,8 +9,8 @@ describe("BestSellers", () => {
         <BestSellers />
       </BrowserRouter>
     );
-    const linkComponent = await getAllByRole("img");
-    fireEvent.click(linkComponent);
+    const link = await getAllByRole("img");
+    fireEvent.click(link);
     expect(window.location.pathname).toBe("/shop/:id");
   });
 });

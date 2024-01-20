@@ -12,9 +12,8 @@ import {
 } from "react-icons/bs";
 import { IconContext } from "react-icons";
 
-export default function HomePageCarousel() {
+export default function HomePageCarousel({ imgNum, setImgNum }) {
   const imgArr = [homeImage1, homeImage5, homeImage2];
-  const [imgNum, setImgNum] = useState(0);
   const [buttonHover, setButtonHover] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
@@ -62,13 +61,13 @@ export default function HomePageCarousel() {
                       justifyContent: "center",
                     }}
                   >
-                    SHOP
+                    STORE
                     <IconContext.Provider value={{ size: "25px" }}>
                       <FaPaw style={{ marginLeft: "10px" }} />
                     </IconContext.Provider>
                   </span>
                 ) : (
-                  <span style={{ fontSize: "small" }}> BARK & BROWSE</span>
+                  <span style={{ fontSize: "small" }}>BARK & BROWSE</span>
                 )}
               </button>
             </Link>

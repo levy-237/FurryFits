@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: serif;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -563,6 +563,7 @@ hr {
 .cardInfo h1 {
   font-size: 3rem;
   margin-bottom: 10px;
+  font-family: sans-serif;
 }
 .cardP:hover {
   cursor: pointer;
@@ -617,6 +618,17 @@ hr {
   height: 10rem;
   width: 7rem;
 }
+.bag-count {
+  margin-left: 3px;
+  cursor: pointer;
+}
+.bestSeller-h1 {
+  font-family: "Courier New";
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
 /* 
 
 

@@ -55,7 +55,10 @@ export default function Bag({ setBagModal, bagModal }) {
           />
           <h2>{item.name}</h2>
           <div>
-            <span onClick={() => removeFromBag(item.id)}>
+            <span
+              onClick={() => removeFromBag(item.id)}
+              data-testid="removeButton"
+            >
               <IoTrashBin />
             </span>
             <h4>${item.price} EUR</h4>

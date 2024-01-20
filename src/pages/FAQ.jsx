@@ -26,13 +26,13 @@ export default function FAQ() {
       <div className="FAQdiv">
         <div className="FAQquestions">
           <h2>TOPICS</h2>
-          <HashLink smooth to="#GENERAL QUERIES">
+          <HashLink smooth to="#GENERAL_QUERIES">
             GENERAL QUERIES
           </HashLink>
-          <HashLink smooth to="#SIZE AND FIT">
+          <HashLink smooth to="#SIZE_AND_FIT">
             SIZE AND FIT
           </HashLink>
-          <HashLink smooth to="#SHIPPING & RETURNS">
+          <HashLink smooth to="#SHIPPING_&_RETURNS">
             SHIPPING AND RETURNS
           </HashLink>
         </div>
@@ -55,7 +55,7 @@ export default function FAQ() {
                     </span>
                   </h4>
                   {questionVisibility[`${setIndex}-${questionIndex}`] && (
-                    <p>{y.answers}</p>
+                    <p data-testid="FAQanswers">{y.answers}</p>
                   )}
                 </div>
               ))}

@@ -43,16 +43,18 @@ export default function Shop() {
       <div>
         <div className="shopImg" style={{ backgroundImage: `url(${shopImg})` }}>
           <h1>
-            FIND THE <br />
+            FIND <br />
             THE BEST!
           </h1>
         </div>
         <div className="shopFilter">
-          <Link style={{ cursor: "default" }}>SORT BY:</Link>
+          <Link style={{ cursor: "default" }} role="list">
+            SORT BY:
+          </Link>
           <div>
             <Link to="?price=up">PRICE ASCENDING</Link>
             <Link to="?price=down">PRICE DESCENDING</Link>
-            <Link to="?price=null" className="RESET">
+            <Link to="" className="RESET">
               RESET
             </Link>
           </div>
@@ -74,6 +76,7 @@ export default function Shop() {
                     }
                   }}
                   loading="lazy"
+                  data-testid="shop-image"
                 />
                 <div className="shopDivBottom">
                   <div>

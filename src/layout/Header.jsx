@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IconContext } from "react-icons";
 import BurgerMenu from "./BurgerMenu";
+import { FaDog } from "react-icons/fa";
 import Bag from "./Bag";
 import { Context } from "../Context";
 export default function Header() {
@@ -39,6 +40,9 @@ export default function Header() {
       >
         <Link to="/" className="headerName">
           <span style={{ fontSize: "x-large" }} onClick={scrollToTop}>
+            <IconContext.Provider value={{ size: "35px" }}>
+              <FaDog />
+            </IconContext.Provider>
             FurryFits
           </span>
         </Link>
@@ -64,9 +68,7 @@ export default function Header() {
         <span onClick={() => setBagModal(!bagModal)}>
           <p className="cart">
             BAG
-            <span style={{ cursor: "pointer", fontSize: "1rem" }}>
-              ({bagCount})
-            </span>
+            <span className="bag-count">({bagCount})</span>
           </p>
           {bagModal && <Bag setBagModal={setBagModal} bagModal={bagModal} />}
         </span>

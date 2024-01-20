@@ -1,6 +1,6 @@
 export const answersData = [
   {
-    questionName: "GENERAL QUERIES",
+    questionName: "GENERAL_QUERIES",
     questions: [
       {
         question: "What types of dog products do you offer?",
@@ -21,7 +21,7 @@ export const answersData = [
     ],
   },
   {
-    questionName: "SIZE AND FIT",
+    questionName: "SIZE_AND_FIT",
     questions: [
       {
         question: "How do I determine the right size for my dog's clothing?",
@@ -46,7 +46,7 @@ export const answersData = [
     ],
   },
   {
-    questionName: "SHIPPING & RETURNS",
+    questionName: "SHIPPING_&_RETURNS",
     questions: [
       {
         question: "How long does shipping usually take?",

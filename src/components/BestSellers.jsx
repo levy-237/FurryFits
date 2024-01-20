@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { db } from "../config/firebase";
 import { getDocs, collection } from "firebase/firestore";
-import { motion, useMotionValue, useTransform } from "framer-motion";
 import "./bestSeller.css";
 import { IconContext } from "react-icons";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
@@ -10,7 +9,6 @@ export default function BestSeller() {
   const productCollection = collection(db, "products");
   const [firstBest, setFirstBest] = useState([]);
   const [secondBest, setSecondBest] = useState([]);
-  const [slider, setSlider] = useState(0);
   useEffect(() => {
     const getProducts = async () => {
       try {
@@ -28,21 +26,14 @@ export default function BestSeller() {
     getProducts();
   }, []);
   const bestSellers = [firstBest, secondBest];
+  const [slider, setSlider] = useState(0);
+
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
   return (
     <>
-      <h1
-        style={{
-          fontFamily: "Courier New",
-          textAlign: "center",
-          marginBottom: "3rem ",
-          fontSize: "3rem",
-        }}
-      >
-        BEST SELLERS
-      </h1>
+      <h1 className="bestSeller-h1">BEST SELLERS</h1>
       <div className="bestContainer">
         {slider == 1 && (
           <span onClick={() => setSlider(0)}>
@@ -52,7 +43,12 @@ export default function BestSeller() {
           </span>
         )}
         {bestSellers[slider].map((x, i) => (
-          <motion.div key={i} className="bestDiv" onClick={scrollToTop}>
+          <div
+            key={i}
+            className="bestDiv"
+            onClick={scrollToTop}
+            data-testid="bestSeller"
+          >
             <Link to={`/shop/${x.id}`}>
               <img
                 src={x.firstPic}
@@ -76,7 +72,7 @@ export default function BestSeller() {
                 <p className="bestPrice">${x.price} EUR</p>
               </div>
             </Link>
-          </motion.div>
+          </div>
         ))}
         {slider == 0 && (
           <span onClick={() => setSlider(1)}>
